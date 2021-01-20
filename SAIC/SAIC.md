@@ -1,0 +1,3 @@
+The original role was to maintain a Microsoft Access Database which connected to the HelpDesk backend database which was on SQL server.   The original developers choose to use an OBDC DSN connection to get data from the SQL database.   The application was then used to generate the data for the reports.
+
+Having reviewed the process, I was convinced that I could write the SQL queries to generate the data.  One dataset took approximately 45 mins to generate via the Access database.  So I created a SQL query to extract an present the data.  During the first parallel run to test the accuracy and efficiency, the SQL query took 90 seconds to return the results.  After 45 mins the Access database returned an identical resultset.  
