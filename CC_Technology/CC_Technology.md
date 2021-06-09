@@ -35,7 +35,7 @@ One of the bottlenecks when diagnosing some issues for clients, developers requi
 
 A large charitable organaistion choose Grant Tracker software to replace the old software they had used to manage their grants.  Part of the migration project requirements was to migrate the data from the existing system mainframe system to the SQL server environment.   Some of the data once migrated required to be adjusted.  To achieve several times, I was given the task work with the client to make changes to the data.  The way that I achieved this required the use of various SQL scripts written to identify and make the required adjustments to the data.
 
-## Data Dictonary
+## Data Dictionary
 The schema used for the Grant Tracker application is somewhat complex and takes some time to comprehend fully, even for an experienced database developer. One approach used is the creation of "reporting views" these are made available to the client,  With the specific purpose of exposing data to the clients so that our clients could use them as a data source for reports.  Over time the application developed, so developers added additional fields to the reporting views.  As developers added more functionality to the application, the developers added more reporting views.
 The responsibility to maintain and communicate a data dictionary to each customer who requested one was down to me.  This task is complicated by the issue that each customer may only have access to a subset of the reporting views.  Developers would check in changes to production, and my team would not always be told about the additions or changes.   So I created an SSIS package which would monitor a specific database for any changes to the reporting views.  These changes would be logged with the date and nature of the change.  In the database which recorded the change, details regarding the reporting view and specific field were recorded.  With this database, we could give the client a complete reporting view data dictionary as and when required.
 
@@ -47,8 +47,8 @@ One of the clients contacted us regarding accessing application data for reporti
 
 We decided to create a maintenance plan; this would perform several tasks each night.
 
-Step 1 - Remove the previous backup file.
-Step 2 - Backup Production DB to the reporting server
-Step 3 - Restore Production DB to the reporting server.
-Step 4 - Delete users from Restored DB on the reporting server.
-Step 5 - Add the account that will be used to access the database only grant select permissions to the reporting views (RV's)
+Step 1 - Remove the previous backup file.</br>
+Step 2 - Backup Production DB to the reporting server.</br>
+Step 3 - Restore Production DB to the reporting server.</br>
+Step 4 - Delete users from Restored DB on the reporting server.</br>
+Step 5 - Add the account that will be used to access the database only grant select permissions to the reporting views (RV's)</br>
