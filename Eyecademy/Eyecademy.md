@@ -32,4 +32,4 @@ As part of conversation with Glasgow City Council regarding data story telling w
 
 The report uses a variety of data sources, a custom visual called Icon Map.  To create the maps show required some detailed knowledge of the geographical file formats used, including ShapeFiles, GeoJson and WKT format to achieve the desired result.
 
-https://app.powerbi.com/view?r=eyJrIjoiOGY2ZGJjOTAtNmM2MC00MDRmLWJhYjgtNDg1NmM2N2I1MjM5IiwidCI6ImI4NjY0M2ViLTY2ZWQtNDYzZi05ZWU2LTE3YjY5ZmQ2M2JiZiIsImMiOjh9&pageName=ReportSectionb02a5aa2b8b7250710b1
+See link to report here -> https://lnkd.in/dwvFwhGM
