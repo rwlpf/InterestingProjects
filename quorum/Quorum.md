@@ -7,3 +7,5 @@ The Twitter extraction pipeline has been completed. This will get the required d
 The next step is to get the non-public metrics for any less than 30 days old tweet.  To do this, that requires Auth 1.0a credentials.  To achieve this, a python script was created, which is called using an Azure Function.  The function accepts as a parameter which is the tweet ID to return the metrics for, the JSON that returned is the passed to stored procedure and the appropriate record updated with the metrics
 
 ## Power Bi 
+
+A Quorum Journey
