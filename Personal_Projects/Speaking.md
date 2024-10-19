@@ -25,3 +25,12 @@ Abstract - We all know when someone is really listening to what we are saying.  
 
 Like many soft skills there some practical things you can do to help improve your listening skills.  During this session we will look what you can do to become a better listener.  From this session you have some practical, simple hints and tips that you can put into practice as soon leave this session.
 
+
+**Make my report pop - using psychology, physiology, and design to create dazzling report - Delivered at SQL Bits 2024 - 120 min session**
+
+This was a joint session with Oliva Wise
+
+
+**Goldilocks and the Three Business Bears: Mastering the Art of Storytelling for Success**
+Delivered at DataGrillen 2022 and Data Scotland 2024
+This lead to being invited to work with Aviva to deliver the same session the data insight team (Data Scotland)
