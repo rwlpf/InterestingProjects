@@ -15,7 +15,7 @@ in order to be selected you must me a somewhat known entity. In order to get kno
 
 
 Jo David - message on Linked In 2024-10-11 after session at Data Minds Connect
- Hi Robert,
+"Hi Robert,
 
 I promised you I would write you some feedback for your wall of facts.
 
@@ -26,4 +26,4 @@ It has been a pleasure meeting you and seeing your session, I hope you continue 
 You are an amazing person and the world is a much better place with you in it.
 
 Kind regards,
-Jo
+Jo"
