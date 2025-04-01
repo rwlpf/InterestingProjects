@@ -1,0 +1,143 @@
+table ServicesNextHrSpreadsheetViaStations
+	lineageTag: 00d0a4c4-14b9-49a7-a3b9-5e7bdb574bca
+
+	column Start
+		dataType: string
+		lineageTag: a513624a-8cf8-4c06-a604-e4fab085482f
+		summarizeBy: none
+		sourceColumn: Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column Destination
+		dataType: string
+		lineageTag: 4c43d497-9161-4d6f-bab1-7fa2faf7ac60
+		summarizeBy: none
+		sourceColumn: Destination
+
+		annotation SummarizationSetBy = Automatic
+
+	column StationDeparture
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: d466d19d-1c73-4880-a3c5-416ff6e1433b
+		summarizeBy: none
+		sourceColumn: StationDeparture
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column platform
+		dataType: string
+		lineageTag: 6ad74244-af3b-41d3-897c-aa6bde1f618c
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'services.serviceUid'
+		dataType: string
+		lineageTag: 736d4e7e-ed64-49b9-9ef1-5823d509ff67
+		summarizeBy: none
+		sourceColumn: services.serviceUid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: bb375c96-911e-479a-9e07-f168053b0751
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column TodaysDate
+		dataType: string
+		lineageTag: 42090a77-a285-42d8-92ea-661e09aa1bb5
+		summarizeBy: none
+		sourceColumn: TodaysDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: 31c45a2b-d46e-4aec-871a-b50cf1e8bb22
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	column relPath
+		dataType: string
+		lineageTag: 4783602c-6ffd-423f-98ba-7ed122ed6f1e
+		summarizeBy: none
+		sourceColumn: relPath
+
+		annotation SummarizationSetBy = Automatic
+
+	column crs
+		dataType: string
+		lineageTag: 518fee1f-77ca-4ef9-b53b-91f755a6dcd1
+		summarizeBy: none
+		sourceColumn: crs
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'platform.1'
+		dataType: string
+		lineageTag: 776df2c3-7630-4972-8332-48fc3979e544
+		summarizeBy: none
+		sourceColumn: platform.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Departure
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: eaaf68fd-3bba-4cf4-b70d-cb2cad020606
+		summarizeBy: none
+		sourceColumn: Departure
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column StationOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: f2370121-0f97-40ce-b468-2fb9ec28dbf5
+		summarizeBy: sum
+		sourceColumn: StationOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Station
+		dataType: string
+		lineageTag: f6550a35-c36a-4b86-bfb0-8c514fcbe2d7
+		summarizeBy: none
+		sourceColumn: Station
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ServicesNextHrSpreadsheetViaStations = m
+		mode: import
+		source = ```
+				let
+				_WorkspaceID = WorkspaceID,
+				_DataFlow = DataflowID,
+				  _EntityName = "ServicesNextHrSpreadsheetViaStationsV2",
+				  Source       = PowerPlatform.Dataflows(null), 
+				  Workspaces   = Source{[Id = "Workspaces"]}[Data], 
+				  Workspace    = Workspaces{[workspaceId = _WorkspaceID]}[Data], 
+				  DataFlow     = Workspace{[dataflowId = _DataFlow]}[Data], 
+				  DataFlow_    = DataFlow{[entity = _EntityName, version = ""]}[Data]
+				in
+				    DataFlow_
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

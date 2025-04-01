@@ -1,0 +1,4 @@
+relationship d0629135-c923-0efb-00e4-28d1f624391a
+	fromColumn: ServicesNextHrSpreadsheetViaStations.'services.serviceUid'
+	toColumn: ServicesNextHrSpreadsheet.'services.serviceUid'
+

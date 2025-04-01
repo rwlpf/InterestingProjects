@@ -1,0 +1,56 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 24.449393941119475
+      },
+      "nodes": [
+        {
+          "location": {},
+          "nodeIndex": "ServicesNextHrSpreadsheet",
+          "nodeLineageTag": "5e3a0cee-8069-4135-b501-4f0ae14affec",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "ServicesNextHrSpreadsheetViaStations",
+          "nodeLineageTag": "f607f683-ec32-4d38-b0ce-c40e98a55730",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 110.43218521090155,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "StarSchema",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "StarSchema",
+  "defaultDiagram": "All tables"
+}

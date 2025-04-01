@@ -1,0 +1,88 @@
+table ServicesNextHrSpreadsheet
+	lineageTag: d50e5a65-4aec-4a0d-b950-55b415eeff08
+
+	column StartStation
+		dataType: string
+		lineageTag: 9a443aaf-ea54-4ed8-9d6c-0028333ca3e9
+		summarizeBy: none
+		sourceColumn: StartStation
+
+		annotation SummarizationSetBy = Automatic
+
+	column DestinationStation
+		dataType: string
+		lineageTag: b75836e7-4b1c-4e35-a123-f533fc52a7c7
+		summarizeBy: none
+		sourceColumn: DestinationStation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Start
+		dataType: string
+		lineageTag: d9113858-dd5a-4a84-a234-9c13fa62df50
+		summarizeBy: none
+		sourceColumn: Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column Destination
+		dataType: string
+		lineageTag: e6b74a56-12d6-4b15-afaa-7e6bb15982ef
+		summarizeBy: none
+		sourceColumn: Destination
+
+		annotation SummarizationSetBy = Automatic
+
+	column realtimeDeparture
+		dataType: string
+		lineageTag: f7e1368d-4405-4435-98bb-cd3bf34bba6a
+		summarizeBy: none
+		sourceColumn: realtimeDeparture
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: 3337c9ae-23b2-4186-b7e8-5128bdbc5554
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'services.serviceUid'
+		dataType: string
+		lineageTag: 03d638fe-2a33-48e1-b0e6-c2398fd07739
+		summarizeBy: none
+		sourceColumn: services.serviceUid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bbd5d10-5381-4a63-b114-0f53e809cb17
+		summarizeBy: none
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ServicesNextHrSpreadsheet = m
+		mode: import
+		source = ```
+				let
+				_WorkspaceID = WorkspaceID,
+				_DataFlow = DataflowID,
+				  _EntityName = "ServicesNextHrSpreadsheet",
+				  Source       = PowerPlatform.Dataflows(null), 
+				  Workspaces   = Source{[Id = "Workspaces"]}[Data], 
+				  Workspace    = Workspaces{[workspaceId = _WorkspaceID]}[Data], 
+				  DataFlow     = Workspace{[dataflowId = _DataFlow]}[Data], 
+				  DataFlow_    = DataFlow{[entity = _EntityName, version = ""]}[Data]
+				in
+				    DataFlow_
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

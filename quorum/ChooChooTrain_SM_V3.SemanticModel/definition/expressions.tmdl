@@ -1,0 +1,16 @@
+expression WorkspaceID = "1dd1adef-32f5-4c46-b2be-f90d6cbc8ed1" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: dbf2a862-2de4-4f56-b9c3-dc41512a2363
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression DataflowID = "38316290-e351-49cc-9f8a-0aa40ec08e0f" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 0793f9b0-ff0e-4e4a-9890-787b02c0e585
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ChooChooTrain - Thin Rpt"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1d435a28-06b0-4531-a3e0-4ab6fcbe1c56"
+  }
+}
