@@ -52,3 +52,5 @@ Step 2 - Backup Production DB to the reporting server.</br>
 Step 3 - Restore Production DB to the reporting server.</br>
 Step 4 - Delete users from Restored DB on the reporting server.</br>
 Step 5 - Add the account that will be used to access the database only grant select permissions to the reporting views (RV's)</br>
+
+The client then chose to use Power BI to visualise the data.

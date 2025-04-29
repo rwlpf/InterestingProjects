@@ -7,6 +7,7 @@ The a sample of the doucments can be found [here.](https://github.com/rwlpf/Inte
 
 Our commerical team was speaking to a major public sector organisation in Glasgow.  During the meetings with my colleagues they mentioned wanting assistance with data story telling.  There was a dataset which I had been working about potholes in Glasgow.  Working with my fellow consultants we were able to generate a data story.  At a subsquent meeting with the client, a colleague and myself presented a data story to the client.  This is an article with a link to a recording of the data story presented and a link to the Power BI report used.
 https://www.linkedin.com/posts/rwlpfrench_data-story-about-pot-holes-in-glasgow-scotand-activity-6726407398187184128-TugA
+
 ## Bit of query optimisation
 Whilst working with a client, I was doing some work on SSIS packages for them.  Typically these are several TSQL statements executed as part of the package to perform various tasks.   Part of the process was to review how long the package took to run.  When I checked the package had taken 10 hours to run, which did seem like a very long time.  Next, I decided to review the individual queries.  There was two which took a long time, 4 hours and 1.5 hours respectively.  After reviewing the queries, then making some changes, both queries ran in less than 1min and 30 seconds.  As a previous line manager often said to some developers, never use a function in a join and watch out for implicate data conversions in the joins.
 # Webinars

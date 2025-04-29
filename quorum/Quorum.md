@@ -27,51 +27,41 @@ How to tell stories with data using Power BI
 How to use the Power Platform to share information and collaborate with others
 This session is ideal for anyone who wants to learn more about the Power Platform and how it can be used to create innovative and engaging solutions.
 
-  
-
 **Defender project**
+One of our teams, had been able to secure a managed security service. Providing various reports based on the standard reports provided by the Defender portal. The security lead would spend up to 5 days per month producing the reports. We took original KQL queries then divided the work into the various component parts. First we extracted the data using DataFlows connecting directly via the API to the Defender process. Given that this was DataFlow Gen 1 we could only retain 30 days of data. Once the data had been extracted then the ETL process to convert to a STAR schema was completed in Power Query Editor.  This allowed the team to focus on the reporting requirements of the customer. 
 
-  
+The next phase a dedicated data engineering team wrote python notebooks to extract data from the Defender API automatically on a daily basis. 
 
-One of our teams, had been able to secure a managed security service. Providing various reports based on the standard reports provided by the Defender portal. The security lead would spend up to 5 days per month producing the reports. We took original KQL queries then divided the work into parts. The data engineering wrote python notebooks to extract data from the Defender API automatically on a daily basis. The data
+ 
 
-  
-  
-  
+**Syngerist / Utilization**
+The financial controller had chosen to move on to another role. As a result the utilization report which had been manually created each month required to be reproduced.  The data director gave me the a copy of the original excel spreadsheet to create the report from.
 
-**Syngerist**
-The financial controller had chosen to move on to another role. As a result the utilisation report which had been manually created each month required to be reproduced.  The data director gave me the a copy of the original excel spreadsheet to create the report from.
+Data was extracted on a daily basis to a SQL server which was in its own VNET. This required an Azure VM to be set up in the same VNET. With a on premise Power BI Data gateway running on the Azure VM to allow a connection to the data source on the SQL server database.  This had to be configured to run in the Quorum Power BI service, which was then extracted via a Dataflow. ETL was done by extract data from SQL Server via DataGateway connected to a Private endpoint.  The data was consumed by the semantic model using a suitable STAR schema. Following various requirements from the end users, presented the data to the end users via a Power BI. Some of the calculations where completed on the fly using DAX. 
 
-Data was extracted on a daily basis to a SQL server which was in its own VNET. This required an Azure VM to be set up in the same VNET. With a on premise Power BI Data gateway running on the Azure VM to allow a connection to the data source on the SQL server database.  This had to be configured to run in the Quorum Power BI service, which was then extracted via a Dataflow.
-
-  
-  
-
-**Utilisation**
+The data was consumed and updated on a daily basis allowing the end users to view the data on a daily rather than a monthly basis. Using Deployment pipelines all the development occurred in the dev workspace and changes where pushed out the UAT and finally production environments.
 
 **Sales Pipeline**
 
-  
+ 
 
 **PMO project**
+For each project the Project Manager for each project had to download on a weekly basis all the required information on how much time had been charged to a project. The the data was extracted in a CSV file which was then imported into a dedicated excel spreadsheet. We created a POC which demonstrated that all this could be completed automatically extracting the relevant data and display it to the customer. 
 
-  
-  
+**Non-Profit organization**
 
-**Non-Profit organisation**
-
-Client had a Dataflow with numerous dependences which is key to day to day running of the organisation. This Gen 1 dataflow took over 2.5 hours to complete. This consumed considerable amounts of the Fabric capcity. Following a review of the Dataflow we determine that it could run faster if translated to a SQL server Stored procedure. Following analysis and extensive test the dataflow and all the required dependencies were migrated.
+Client had a Dataflow with numerous dependencies which is key to day to day running of the organization. This Gen 1 dataflow took over 2.5 hours to complete. This consumed considerable amounts of the Fabric capacity. Following a review of the Dataflow we determine that it could run faster if translated to a SQL server Stored procedure. Following analysis and extensive test the dataflow and all the required dependencies were migrated.
 
  - When run in an Azure SQL database S0 (lowest tier) it took 4 mins 30 seconds 
- -   When run in an Azure SQL database S4 (DB was scaled up to this for data loads) it took 1 mins 30 seconds
+ -  When run in an Azure SQL database S4 (DB was scaled up to this for data loads) it took 1 mins 30 seconds
 
 Approximately 250k rows outputted.
 
 **RLS Project**
-The our client wanted to create POC, we given a relatively straightforward specification. For this project a person (tradesperson) would visit a clients house. 
+The our client wanted to create POC, we given a relatively straightforward specification. For this project a person (trades person) would visit a clients house. 
 
-The client wanted to the tradesperson to see who they were visiting. Only showing their records of the visit, start and end time, address details etc. They should only see their own records.
+The client wanted to the trades-person to see who they were visiting. Only showing their records of the visit, start and end time, address details etc. They should only see their own records.
 
-At the same the person who was receiving a visit would only be able to see those tradesperson who was visit them.  Only showing their records of the visit, start, end time, name of the tradesperson.
+At the same the person who was receiving a visit would only be able to see those trades person who was visit them.  Only showing their records of the visit, start, end time, name of the trades person.
 
 To add to this, client add the requirement that those persons being visited should be able to see a picture of the tradesperson who was visiting. We used a Power BI report to allow use to implement the RLS. So we had to embed the pictures into the report. The pictures of the tradesperson could not be stored on a publicly accessible URL. This for reasons for GDPR and security reasons. So we converted the images to Base64 encoder [Base64 Image Encoder](https://www.base64-image.de/). Next the resulting string was stored in a VARCHAR field in SQL server, which we were then able to display on the report securely.
