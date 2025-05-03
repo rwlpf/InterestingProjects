@@ -10,6 +10,7 @@ https://www.linkedin.com/posts/rwlpfrench_data-story-about-pot-holes-in-glasgow-
 
 ## Bit of query optimisation
 Whilst working with a client, I was doing some work on SSIS packages for them.  Typically these are several TSQL statements executed as part of the package to perform various tasks.   Part of the process was to review how long the package took to run.  When I checked the package had taken 10 hours to run, which did seem like a very long time.  Next, I decided to review the individual queries.  There was two which took a long time, 4 hours and 1.5 hours respectively.  After reviewing the queries, then making some changes, both queries ran in less than 1min and 30 seconds.  As a previous line manager often said to some developers, never use a function in a join and watch out for implicate data conversions in the joins.
+
 # Webinars
 During a discussion with the marketing department, one, suggestion that I made was to record some webinars.  These would be about one of my favourite topics which is data.  After recording the first one, I was keen to engage with other members of the team.  There were several reasons for this.  Rather than looking like I was the only consultant on the team, involving others meant our clients and customers could see a much larger group.  Another reason is that I would be working as part of a team, so we could generate better ideas, and consider other approaches. 
 Below is a list of the webinars that were recorded and published to YouTube.
@@ -27,7 +28,7 @@ https://www.eyecademy.com/blog/ultimate-power-bi-licensing-4/
 
 **Power BI Licensing Made Simple** - https://www.youtube.com/watch?v=35DbqMWtjFI&t=2s
 
-##PowerBI Report on Potholes##
+##PowerBI Report on Potholes
 
 As part of conversation with Glasgow City Council regarding data story telling we created a PowerBI report about Potholes in Glasgow.  This was supported by a short presentation, and then taking the audience through the report. 
 
